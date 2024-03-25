@@ -1,17 +1,15 @@
-
-
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-2xl gap-0 text-secondary normal-case">Byte<span className="text-primary">Blaze</span></a>
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li><a>Blogs</a></li>
-                        <li><a>BookMarks</a></li>
+                        <li className="font-bold"><a>Home</a></li>
+                        <li className="font-bold text-primary"><a>Blogs</a></li>
+                        <li className="font-bold"><a>BookMarks</a></li>
                     </ul>
                     <label className="cursor-pointer grid place-items-center">
                         <input type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
