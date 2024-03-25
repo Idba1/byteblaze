@@ -1,10 +1,11 @@
 import './App.css'
+import Home from './Pages/Home'
 
 function App() {
 
   return (
     <>
-        <button className="btn btn-outline btn-secondary">Secondary</button>
+        <Home></Home>
     </>
   )
 }
