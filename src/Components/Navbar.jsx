@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const [theme, setTheme] = useState ('light')
+    const [theme, setTheme] = useState ('synthwave')
 
     useEffect(()=>{
         localStorage.setItem('theme', theme)
@@ -11,10 +12,10 @@ const Navbar = () => {
 
     const handleToggle = (e) =>{
         if(e.target.checked){
-            setTheme('synthwave')
+            setTheme('light')
         }
         else{
-            setTheme('light')
+            setTheme('synthwave')
         }
     }
     console.log(theme);
@@ -26,9 +27,9 @@ const Navbar = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
-                        <li className="font-bold"><a>Home</a></li>
-                        <li className="font-bold text-primary"><a>Blogs</a></li>
-                        <li className="font-bold"><a>BookMarks</a></li>
+                        <Link to={"/"} className="font-bold"><a>Home</a></Link>
+                        <Link to={"/blogs"} className="font-bold text-primary"><a>Blogs</a></Link>
+                        <Link to={"/bookmark"} className="font-bold"><a>BookMarks</a></Link>
                     </ul>
                     <label className="cursor-pointer grid place-items-center">
                         <input 
