@@ -1,13 +1,9 @@
-import Navbar from "../Components/Navbar";
+import Hero from "../Components/Hero";
 
 const Home = () => {
     return (
         <div>
-            {/* Navbar */}
-            <div className="h-16">
-                <Navbar></Navbar>
-            </div>
-            <h1>Home page</h1>
+            <Hero></Hero>
         </div>
     );
 };
