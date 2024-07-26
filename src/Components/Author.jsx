@@ -1,4 +1,5 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
+import Loader from "./Loader";
 
 const Author = () => {
     const blog = useLoaderData();
@@ -10,7 +11,8 @@ const Author = () => {
         twitter_username,
         website_url,
     } = blog.user
-
+    const navigation = useNavigation()
+    if (navigation.state === 'loading') return <Loader></Loader>
     return (
         <div>
 

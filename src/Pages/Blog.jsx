@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { MdBookmarkAdd } from 'react-icons/md'
+
 
 const Blog = () => {
     const blog = useLoaderData()
@@ -14,6 +16,9 @@ const Blog = () => {
         public_reactions_count,
     } = blog
 
+    const handleBookmark = blog => {
+        console.log(blog);
+    }
     return (
         <div className='max-w-3xl px-6 py-16 mx-auto space-y-12 overflow-hidden'>
             <article className='space-y-8 '>
@@ -75,6 +80,16 @@ const Blog = () => {
                         </svg>
                         <span>Author</span>
                     </Link>
+
+                    {/* BookMark */}
+
+                    <div
+                        onClick={() => handleBookmark(blog)}
+                        className='bg-primary p-3 ml-5 rounded-full hover:bg-opacity-30 bg-opacity-20 cursor-pointer hover:scale-105 overflow-hidden'
+                    >
+                        <MdBookmarkAdd size={20} className='text-secondary' />
+                    </div>
+
                 </div>
                 <Outlet></Outlet>
                 {/* {tags.map(tag => <p key={tag} className="text-xs font-semibold tracking-wider uppercase">#{tag}</p>)}

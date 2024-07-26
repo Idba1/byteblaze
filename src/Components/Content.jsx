@@ -1,11 +1,14 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import placeholderImg from '../assets/404.jpg'
 import Markdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
+import Loader from "./Loader";
 
 const Content = () => {
     const blog = useLoaderData();
     const { cover_image, tags, body_html } = blog
+    const navigation = useNavigation()
+    if (navigation.state === 'loading') return <Loader></Loader>
 
     return (
         <div className='mx-auto transition border-2 p-2  border-opacity-30 group hover:no-underline focus:no-underline '>
