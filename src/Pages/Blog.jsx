@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
 import { MdBookmarkAdd } from 'react-icons/md'
+import { saveBlog } from "../utils";
 
 
 const Blog = () => {
@@ -18,6 +19,7 @@ const Blog = () => {
 
     const handleBookmark = blog => {
         console.log(blog);
+        saveBlog(blog)
     }
     return (
         <div className='max-w-3xl px-6 py-16 mx-auto space-y-12 overflow-hidden'>
