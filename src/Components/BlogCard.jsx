@@ -4,6 +4,7 @@ import placeholderImg from '../assets/404.jpg'
 
 const BlogCard = ({ blog }) => {
     console.log(blog);
+    
     const { cover_image, title, description, published_at} = blog
     return (
         <div className="flex relative">

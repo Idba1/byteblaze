@@ -9,11 +9,11 @@ const Author = () => {
         github_username,
         twitter_username,
         website_url,
-      } = blog.user
-      
+    } = blog.user
+
     return (
         <div>
-            
+
             <div className='flex flex-col justify-center items-center  p-6 shadow-md rounded-xl sm:px-12 '>
                 <img
                     src={profile_image}
