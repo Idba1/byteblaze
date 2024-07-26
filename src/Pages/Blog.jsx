@@ -77,6 +77,8 @@ const Blog = () => {
                     </Link>
                 </div>
                 <Outlet></Outlet>
+                {/* {tags.map(tag => <p key={tag} className="text-xs font-semibold tracking-wider uppercase">#{tag}</p>)}
+                {body_html} */}
             </article>
         </div>
     );

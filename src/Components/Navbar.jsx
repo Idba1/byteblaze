@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [theme, setTheme] = useState('synthwave')
@@ -23,7 +23,7 @@ const Navbar = () => {
         <div>
             <div className="navbar bg-base-100 shadow-lg px-4 fixed sm:px-8 z-10">
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-2xl gap-0 text-secondary normal-case">Byte<span className="text-primary">Blaze</span></a>
+                    <Link to={'/'} className="btn btn-ghost text-2xl gap-0 text-secondary normal-case">Byte<span className="text-primary">Blaze</span></Link>
                 </div>
                 <div className="flex-none gap-2">
                     <ul className="menu menu-horizontal px-1 hidden sm:flex items-center gap-3">
