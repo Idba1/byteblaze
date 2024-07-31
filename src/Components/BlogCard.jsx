@@ -23,7 +23,7 @@ const BlogCard = ({ blog, deletable, handleDelete }) => {
             {deletable && (
                 <div
                     onClick={() => handleDelete(blog.id)}
-                    className='bg-primary p-3 ml-5 rounded-full hover:bg-secondary group  cursor-pointer hover:scale-105 absolute -top-5 -right-5'
+                    className='bg-primary p-3 ml-5 rounded-full hover:bg-secondary group  cursor-pointer hover:scale-105 absolute -top-5 -right-0'
                 >
                     <MdDeleteForever
                         size={20}
