@@ -6,7 +6,7 @@ import Loader from "./Loader";
 
 const Content = () => {
     const blog = useLoaderData();
-    const { cover_image, tags, body_html } = blog
+    const { cover_image, tags, body_html, url, title } = blog
     const navigation = useNavigation()
     if (navigation.state === 'loading') return <Loader></Loader>
 
@@ -30,8 +30,15 @@ const Content = () => {
                             </a>
                         ))}
                 </div>
-            </div>
-            <Markdown rehypePlugins={[rehypeRaw]}>{body_html}</Markdown>
+                <a
+                    target='_blank'
+                    href={url}
+                    className='text-2xl font-semibold group-hover:underline group-focus:underline'
+                >
+                    {title}
+                </a>
+                <Markdown rehypePlugins={[rehypeRaw]}>{body_html}</Markdown>
+            </div>          
         </div>
     )
 };
