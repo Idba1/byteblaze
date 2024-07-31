@@ -21,3 +21,12 @@ export const saveBlog = blog => {
   localStorage.setItem('blogs', JSON.stringify(blogs))
   toast.success('Blog Bookmarked Successfully!')
 }
+
+
+// Delete blogs
+export const deleteBlog = id => {
+  let blogs = getBlogs()
+  const remaining = blogs.filter(b => b.id !== id)
+  localStorage.setItem('blogs', JSON.stringify(remaining))
+  toast.success('Blog Removed from Bookmark!')
+}
